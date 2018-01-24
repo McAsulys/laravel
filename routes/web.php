@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/general','MonControlleur@general');
+Route::get('/real/{id}','Film@realisateur')->where('id', '[0-9]+');
+Route::get('/addmovie', 'bdd@film');
+Route::get('/formfilm', 'MonControlleur@form');
